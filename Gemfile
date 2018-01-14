@@ -43,5 +43,13 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Debbuger
+  gem 'pry'
 end
 
+# Sanitize card numbers
+gem 'credit_card_sanitizer', git: 'git://github.com/eac/credit_card_sanitizer.git'
+
+# Materialize css wrapper gem
+gem 'rails-assets-materialize', source: 'https://rails-assets.org'

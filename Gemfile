@@ -48,6 +48,10 @@ group :development do
   gem 'pry'
 end
 
+# Testing gems
+gem 'rspec-rails', '~> 3.0', group: [:development, :test]
+gem 'capybara', group: :test
+
 # Sanitize card numbers
 gem 'credit_card_sanitizer', git: 'git://github.com/eac/credit_card_sanitizer.git'
 

@@ -17,3 +17,8 @@ This is an empty Rails 4.2.7 project.
 An interactive ruby console can be opened in a terminal by running:
 
     bundle exec pry
+
+### Testing
+Run test suite:
+
+    bundle exec rspec test/integration/credit_card_test.rb

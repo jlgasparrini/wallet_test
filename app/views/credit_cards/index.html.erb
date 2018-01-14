@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s4 offset-s3">
+    <h4> Your wallet </h4>
+  </div>
+
+  <div class="col s6 offset-s3">
+    <div class="row">
+
+      <% @cards.each do |c| %>
+        <div class="col s12">
+          <div class="right-align">
+            <%= link_to 'x', credit_card_path(c), method: :delete,
+                class: 'btn-flat waves-effect cc-destroy' %>
+          </div>
+          <hr class="cc-hr-align">
+        </div>
+        <div class="col s1">
+          <i class="material-icons intermediate">credit_card</i>
+        </div>
+        <div class="col s7 cc-number-size">
+          <%= c.card_number %>
+        </div>
+        <div class="col s1 cc-due-size">
+          <%= c.expiration_date %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="col s12">
+    <div class="center-align">
+      <%= link_to 'ADD A NEW CARD', new_credit_card_path,
+                  class: 'waves-effect btn-large white black-text btn-bold',
+                  data: { turbolinks: false } %>
+    </div>
+  </div>
+</div>

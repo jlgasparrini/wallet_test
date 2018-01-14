@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col s4 offset-s3">
+    <h4> New Credit Card </h4>
+  </div>
+
+  <div class="col s6 offset-s3">
+    <div class="row">
+      <%= form_for @card, data: { turbolinks: false } do |f| %>
+
+        <div class="col s12">
+          <%= f.label :card_number, 'Credit Card Number' %>
+          <%= f.text_field :card_number, placeholder: 'XXXX XXXX XXXX XXXX' %>
+        </div>
+        <div class="col s12">
+          <%= f.label :expiration_date, 'Expiration Date' %>
+          <%= f.text_field :expiration_date, placeholder: 'MM/YYYY' %>
+        </div>
+        <div class="col s12">
+          <%= f.label :security_code, 'CSV/CVV' %>
+          <%= f.text_field :security_code, placeholder: 'Security Code' %>
+        </div>
+
+        <div class="col s6">
+          <%= link_to 'Cancel', credit_cards_path, class: 'waves-effect btn-large white black-text' %>
+        </div>
+        <div class="col s6 right-align">
+          <%= button_tag 'Save Card', class: 'waves-effect btn-large white black-text' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
